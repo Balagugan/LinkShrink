@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortener</title>
+    <!-- Load static files -->
+    {% load static %}
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="{% static 'linkshrink/style.css' %}" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="container">
+      <h1>LINK SHRINK</h1>
+      <form method="post" class="mt-4">
+        {% csrf_token %}
+        <div class="form-group">
+          <input
+            type="url"
+            name="original_url"
+            class="form-control"
+            placeholder="Enter your URL"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">SHRINK</button>
+      </form>
+      {% if short_code %}
+      <div class="mt-4">
+        <p>
+          Shortened URL:
+          <a href="/{{ short_code }}/" class="alert-link"
+            >https://linkshrink/{{ short_code }}/</a
+          >
+        </p>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
