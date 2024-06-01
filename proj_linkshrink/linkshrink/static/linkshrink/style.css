@@ -1,0 +1,64 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000000;
+}
+
+/* Apply styles to the container */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #fbfafa;
+  margin-top: 200px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Apply styles to the heading */
+h1 {
+  text-align: center;
+}
+
+/* Apply styles to the form group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Apply styles to the form control */
+.form-control {
+  width: 100%;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+/* Apply styles to the button */
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00ff04;
+  color: #000000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Change button background color on hover */
+.btn-primary:hover {
+  background-color: rgb(255, 213, 0);
+}
+
+/* Apply margin top */
+.mt-4 {
+  margin-top: 20px;
+}
